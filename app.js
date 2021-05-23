@@ -11,6 +11,8 @@ var retoRouter = require ('./routes/reto.route');
 var postRouter = require ('./routes/post.route');
 
 const dbConnection = require("./db.config");
+const cors = require('cors');
+
 
 
 
@@ -20,6 +22,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
