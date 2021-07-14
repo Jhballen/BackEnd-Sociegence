@@ -11,10 +11,13 @@ class dbConnection {
                 'mongodb+srv://jhon123:1234jhon@socigence.gvnch.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
                 {useNewUrlParser: true}
             );
-            console.log("Se conecto con exito")
+            console.log("Se conecto con exito la db")
         }catch(e) {
             console.error(e)
         }
     }
+    
+    
+    
 }
 exports.dbConnection = new dbConnection;
